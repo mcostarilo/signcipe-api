@@ -1,0 +1,48 @@
+spring:
+  jackson:
+    serialization: 
+      FAIL_ON_EMPTY_BEANS: false
+        
+  datasource:
+    #url: jdbc:sqlserver://192.168.12.28:1433;databaseName=hcd_prueba4
+    #username: recetadigitalapp
+    #password: RecetaDigital17
+    url: jdbc:sqlserver://192.168.10.92:1433;databaseName=signservice
+    username: sa
+    password: Admin1234
+    #password: root
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    show-sql: true
+    hibernate:
+      #ddl-auto: update
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServer2012Dialect
+  http:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 11MB
+  #mail:
+   #host: smtp.gmail.com
+   #port: 587
+   #username: test@gmail.com
+    #password: password
+    #properties:
+      #smtp:
+        #starttls: 
+          #enable: true
+          #required: true
+        #auth: true
+        #connectiontimeout: 5000
+        #timeout: 5000
+        #writetimeout: 5000
+com.st.hcd.security.jwt:
+  tokenExpirationTime: 480  # Number of minutes
+  refreshTokenExpTime: 1440 # Minutes
+  tokenIssuer: http://stacktrace.com.ar
+#cron.expression: 0 0 0 * * ?
+cron.expression: 0 0/2 * 4 * ?
+  

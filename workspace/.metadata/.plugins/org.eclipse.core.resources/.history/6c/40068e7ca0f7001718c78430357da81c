@@ -7,15 +7,10 @@ spring:
     #url: jdbc:sqlserver://192.168.12.28:1433;databaseName=hcd_prueba4
     #username: recetadigitalapp
     #password: RecetaDigital17
-    #url: jdbc:sqlserver://192.168.10.92:1433;databaseName=signservice
-    #username: sa
-    #password: Admin1234
-    #password: root
-    #driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    
-    url: jdbc:sqlserver://localhost:1433;databaseName=portal
+    url: jdbc:sqlserver://192.168.10.92:1433;databaseName=signservice
     username: sa
-    password: root
+    password: Admin1234
+    #password: root
     driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
   jpa:
     show-sql: true
